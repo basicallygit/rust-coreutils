@@ -1,0 +1,9 @@
+[workspace]
+
+members = [
+    "ls",
+    "cat",
+    "touch",
+    "clear",
+    "rm"
+]
