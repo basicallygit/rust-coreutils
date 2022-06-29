@@ -12,12 +12,8 @@ fn main() {
             //check if file exists
             if Path::new(&argv[i]).exists() {
                 println!("File with name {} already exists", &argv[i]);
-                print!("Continue to overwrite? (y/N) "); // no by default
-                io::stdout().flush().unwrap();
-                let mut input = String::new();
-                io::stdin().read_line(&mut input).unwrap();
-                if input.trim().to_lowercase().starts_with("y") {
-                    File::create(&argv[i]).unwrap();
+                print!("Continue to overwrite? (y/N) "); // Touch by default change acess time stamp if file already exist
+            
                 }
             }
             else {
