@@ -41,7 +41,7 @@ fn main() {
                     }
                 }
                 else {
-                    println!("{} is not a directory", dir);
+                    println!("{}: directory not found", dir);
                 }
             }
             else if flag == "-rf" {
@@ -49,7 +49,7 @@ fn main() {
                     fs::remove_dir_all(dir).unwrap();
                 }
                 else {
-                    println!("{} is not a directory", dir);
+                    println!("{}: directory not found", dir);
                 }
             }
             else {
